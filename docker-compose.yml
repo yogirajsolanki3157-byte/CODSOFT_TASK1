@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web-app:
+    build: .
+    container_name: yogiraj_flask_app
+    ports:
+      - "5000:5000"
+    restart: always
+
+  redis-cache:
+    image: redis:alpine
+    container_name: yogiraj_redis_service
